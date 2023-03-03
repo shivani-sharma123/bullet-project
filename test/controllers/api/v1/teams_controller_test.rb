@@ -21,6 +21,7 @@ class Api::V1::TeamsControllerTest < Api::Test
     assert_equal_or_nil team_data["name"], team.name
     assert_equal_or_nil team_data["time_zone"], team.time_zone
     assert_equal_or_nil team_data["locale"], team.locale
+    assert_equal_or_nil team_data['team_lead'], team.team_lead
     # 🚅 super scaffolding will insert new fields above this line.
   end
 
@@ -61,6 +62,7 @@ class Api::V1::TeamsControllerTest < Api::Test
         name: "Alternative String Value",
         time_zone: "Pacific Time (US & Canada)",
         locale: "Alternative String Value",
+        team_lead: 'Alternative String Value',
         # 🚅 super scaffolding will also insert new fields above this line.
       }
     }
@@ -75,6 +77,7 @@ class Api::V1::TeamsControllerTest < Api::Test
     assert_equal @team.name, "Alternative String Value"
     assert_equal @team.time_zone, "Pacific Time (US & Canada)"
     assert_equal @team.locale, "Alternative String Value"
+    assert_equal @team.team_lead, 'Alternative String Value'
     # 🚅 super scaffolding will additionally insert new fields above this line.
 
     # Also ensure we can't do that same action as another user.

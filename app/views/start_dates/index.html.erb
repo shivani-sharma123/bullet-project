@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Start dates</h1>
+
+<div id="start_dates">
+  <% @start_dates.each do |start_date| %>
+    <%= render start_date %>
+    <p>
+      <%= link_to "Show this start date", start_date %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New start date", new_start_date_path %>

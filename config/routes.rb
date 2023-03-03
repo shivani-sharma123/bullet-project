@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :start_dates
   # See `config/routes/*.rb` to customize these configurations.
   draw "concerns"
   draw "devise"
@@ -65,6 +66,14 @@ Rails.application.routes.draw do
 
         namespace :integrations do
           # 🚅 super scaffolding will insert new integration installations above this line.
+        end
+
+        resources :projects do
+          resources :goals
+        end
+
+        namespace :projects do
+          resources :tags
         end
       end
     end

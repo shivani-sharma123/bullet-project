@@ -2,6 +2,8 @@
   <% p.content_for :title, t('.header', teams_possessive: possessive_string(@team.name)) %>
 
   <% p.content_for :body do %>
+    <%= render 'account/projects/index', projects: @team.projects, hide_back: true %>
+    <%= render 'account/projects/tags/index', tags: @team.projects_tags, hide_back: true %>
     <%# 🚅 super scaffolding will insert new children above this line. %>
 
     <% unless scaffolding_things_disabled? %>

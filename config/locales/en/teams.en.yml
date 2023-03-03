@@ -2,9 +2,14 @@ en:
   teams:
     fields:
       _:
+      team_lead:
+        _: &team_lead Team Lead
+        label: *team_lead
+        heading: *team_lead
       # 🚅 super scaffolding will insert new fields above this line.
   activerecord:
     attributes:
       team:
         _:
+        team_lead: *team_lead
         # 🚅 super scaffolding will insert new activerecord attributes above this line.

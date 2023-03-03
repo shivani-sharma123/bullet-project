@@ -1,0 +1,17 @@
+<%= form_with(model: start_date) do |form| %>
+  <% if start_date.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(start_date.errors.count, "error") %> prohibited this start_date from being saved:</h2>
+
+      <ul>
+        <% start_date.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

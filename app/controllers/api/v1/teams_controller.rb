@@ -5,6 +5,7 @@ class Api::V1::TeamsController < Api::V1::ApplicationController
 
   def permitted_fields
     [
+      :team_lead,
       # 🚅 super scaffolding will insert new fields above this line.
     ]
   end

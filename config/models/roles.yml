@@ -1,5 +1,9 @@
 default:
   models:
+    Projects::Tag: read
+    Goal: read
+    Goal: read
+    Project: read
     Team: read
     Membership:
       - read
@@ -28,6 +32,10 @@ admin:
     - admin
     - editor
   models:
+    Projects::Tag: manage
+    Goal: manage
+    Goal: manage
+    Project: manage
     Team: manage
     Membership: manage
     Scaffolding::AbsolutelyAbstract::CreativeConcept: manage
