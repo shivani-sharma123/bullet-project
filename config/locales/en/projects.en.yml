@@ -76,7 +76,6 @@ en:
         _: &end_date End Date
         label: *end_date
         heading: *end_date
-        placeholder: MM/DD/YYYY
       sales_representative_id: &sales_representative
         _: &sales_representative_id Sales Representative
         label: *sales_representative_id
